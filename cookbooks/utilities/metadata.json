@@ -45,8 +45,9 @@
         ],
         "type": "string",
         "recipes": [
+		  "utilities::cheftutorial": "Chef Tutorial",
           "utilities::create_scheduled_task"
-        ],
+		],
         "description": "The time of the day, based on the server's timezone, to run the task when the 'Hourly frequency' input is set to 24. Format: hh:mm (e.g., 22:30)",
         "display_name": "Task daily time"
       },
@@ -115,7 +116,19 @@
         ],
         "description": "DNS id (from DNS provider) to register for the current public IP",
         "display_name": "DNS id to register"
-      }
+      },
+	  "utilities/MYNAME": {
+		"required": "required",
+		"calculated": false,
+		"choice": [
+		],
+		"type": "string",
+		"recipes": [
+		"utilities::cheftutorial"
+		],
+		"display_name": "Please enter your name",
+		"description": "This is your name"
+	  }
     },
     "groupings": {
     },
